@@ -1,0 +1,44 @@
+#开发配置
+spring:
+  thymeleaf:
+    mode: HTML
+    cache: false
+  messages:
+    basename: i18n/messages
+    spring.thymeleaf.content-type: text/html
+    spring.thymeleaf.cache: false
+    spring.thymeleaf.mode: LEGACYHTML5
+
+
+
+
+  #数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+#jpa配置
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+#日志配置
+  logging:
+    level:
+      root: warn
+      com.pnb: info
+    file: log/blog.log
+
+#指定端口
+server:
+  port: 8081
+
+
+
+comment:
+  avatar: /images/avatar.jpg
+
+
